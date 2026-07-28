@@ -1,26 +1,25 @@
-# Crowdfunding_ETL
- Project 2
- 
-by Sebastian, Jonathan, Elizabeth, Sheryle, and Jasmine.
+# Crowdfunding ETL
 
- # Background
+## Problem
+Raw crowdfunding and contacts workbooks are not analysis-ready — they need an Extract → Transform → Load path into clean tables and a database.
 
-In this project, we worked as team to practice building an ETL (Extract, Transform, Load) pipeline by using Python, Pandas and Python dictionary methods to extract and transform the data from contacts.xlsx and crowdfunding.xlsx 
+## What we built
+A team ETL mini-project that:
+- Builds category, subcategory, campaign, and contacts dataframes from Excel sources
+- Exports clean CSVs
+- Defines a Postgres schema (`crowdfunding_db_schema.sql`) and loads the warehouse
 
-After extracting and transforming the data , we created four CSV files and used the data from these files to create an ERD and a table schema. The CSV file data was then uploaded into a Postgres database. 
+Notebook: `ETL_Mini_Project_EPerezSilvaJJosafatSKawamuraSFernandezJCofield.ipynb` · inputs in `Resources/`.
 
- # Instructions
- 1. Create the Category and Subcategory Data Frames
- 2. Create the Campaign DataFrame
- 3. Create the Contacts DataFrame
- 4. Create the Crowdfunding Database
+## How to run
+```bash
+pip install pandas openpyxl jupyter
+jupyter notebook ETL_Mini_Project_EPerezSilvaJJosafatSKawamuraSFernandezJCofield.ipynb
+# then create DB and run crowdfunding_db_schema.sql / load CSVs
+```
 
-#  Python Libraries
-- Pandas
-- NumPy
+## Stack
+Python · pandas · Excel · PostgreSQL · SQL
 
-# Code Source
-- ETL_Mini_Project_Starter_Code.ipynb provded in Project 2 file
-- Example exercise solutions from module 13
-
-
+## Fun closer
+Four tidy tables later, the crowdfunding spreadsheet finally behaves like a database citizen.
